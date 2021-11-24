@@ -2,20 +2,24 @@
 ##  Exploring Symmetric Key Encryption Modes
 
 Difference between size of plaintext and the file after encryption? 
+
 Answer:
 In block ciphers, the size of plain text and file after encryption are exactly the same.However, practically, the size of cipher text file must be slightly greater because of the block cipher. AES cipher uses fixed block size and padding, but it is more accurate to say that cipher text is same size rounded up to the nearest block size of the plain text. Here, during implementation, Plain text – Group1.txt (4K size) | Cipher text – Group1enc.txt (4K size)
 
 Difference in the size of files and why the ciphertext file has that particular size? 
+
 Answer:
 In AES encryption, the block size is done within 16-octet whereas padding is required to maintain 16-octet, which eventually brings the size of cipher text equal or slightly larger compared to plaintext. 
 
 Why is it better to use hexdump instead of cat, more, less or leafpad?
+
 Answer: 
 It is better to use the hexdump command in this exercise rather than commands like cat, more, less because it displays the selected files in the human readable format. As it is seen that the cat command displays gibberish text which is not human readable, however, the hexdump output is readable.
 
 ## Encryption Modes
 
 ## ECB Mode 
+
 Describe in your own words, what is the difference between the two images? 
 
 Answer:
@@ -29,6 +33,7 @@ Looking at the size of each file it is clearly visible that each file has almost
 
 
 What characteristic of ECB leads this mode of operation to have such a poor job of encryption? 
+
 Answer:
 The ECB mode is not semantically secure, where message are divided and encrypted into separately. Our observation related to ECB mode of operation is lack of diffusion as it does not hide the pattern well. The second weak point is ECB uses same key for encryption and decryption. 
 
@@ -77,15 +82,18 @@ Answer:
 The major advantage of OFB is the error-correction once a bit error will not generate an avalanche of propagation. Each block depends on the block generated before (encryption), making it a strong cipher. This method encrypts the initialization vector in the first block and after that XOR with the plaintext, the next round will use the per-result encrypted to XOR with the next block of plaintext.  This type of encryption makes it difficult to use packages in a Chosen Plaintext attack.
 
 Mode of operation does a better job of encrypting the logo and why? 
+
 Answer:
 OFB is the strongest mode of encryption as it doesn't generate any pattern and each block encrypted will be different even if the plaintext block is identical.
 
 Why do you think the sizes of each encrypted logo are larger than the plaintext logo files?
+
 Answer:
 Adding a initialization vector using a XOR function before or after the encryption could generate more data for each round, which increases file size.
 Depending on the encryption method XOR could occur before or after the encryption.
 
 Are there any encrypted logos that have the same size as plain text logo? Which ones? And why? 
+
 Answer:
 Only the logo using the OFB method. This method encrypts the initialization vector in the first block and after that XOR with the plaintext, the next round will use the per-result encrypted to XOR with the next block of plaintext, generating a ciphertext with the same size.
 
