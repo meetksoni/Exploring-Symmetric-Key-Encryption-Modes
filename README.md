@@ -168,10 +168,12 @@ In the assignment, I used the following extra commands:
 4)	We also explored the diff command using the man diff to find out the options available in the command.
 
 What did you learn from this exercise?
+
 Answer: 
 By doing the assignment, I got a clearer understanding of different modes of operation that is ECB, CBC, CFB and OFB modes. The assignment gives us a hands-on experience on symmetric key encryption, which helped us in understanding the concepts in a more practical manner. We observed the differences in the different modes and the error propagation using these modes. We found the results of the image encryption using different modes quite surprising and interesting. All in all, we got a better understanding of the concepts now.
 
 How could this exercise be improved?
+
 Answer: 
 This exercise is apt for learning symmetric key encryption and different modes of operation.
 
